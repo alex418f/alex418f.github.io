@@ -21,7 +21,7 @@ class Skib extends Skyder{
       this.cup=1;
       this.cdown=this.life;
       this.grace=0;
-      this.skudfart=4;
+      this.skudfart=8;
       this.speedE=0.5;
       this.scoreTexts = [];
       this.Skade = false;
