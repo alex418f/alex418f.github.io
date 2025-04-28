@@ -1,0 +1,65 @@
+@font-face{
+  font-family: 'retro';
+  src: url("AstronBoy.otf");
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#wave {
+  margin-top: 10px;
+  color: white;
+  font-size: 45px ;
+  text-align: top;
+  font-family: retro;
+  padding-top: 0px;
+}
+#highScore {
+  position: absolute; 
+  bottom: 10px;
+  color: white;
+  font-size: 35px ;
+  right: 30%;
+  font-family: retro;
+  padding-top: 0px;
+}
+#score {
+  position: absolute; 
+  bottom: 10px;
+  color: white;
+  font-size: 35px ;
+  left: 30%;
+  font-family: retro;
+  padding-top: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(stjern.png);
+  background-size: 100% 100%;
+}
+
+button {
+  font-family: retro;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
