@@ -28,9 +28,9 @@ function preload(){
     enm1=loadImage("enm1.png");
     enm2=loadImage("enm2.png");
     skb=loadImage("skib.png");
-    stjern=loadImage("stjern.png");
+    stjern=loadImage("Stjern.png");
     heart=loadImage("Heart.png");
-    enm22=loadImage("enm2.2.png");
+    enm22=loadImage("Enm2.2.png");
   }
 
 function setup() {
