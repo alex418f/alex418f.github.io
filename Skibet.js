@@ -1,4 +1,3 @@
-let bullets=[];
 class Skib extends Skyder{
     constructor() {
       super();
@@ -12,7 +11,7 @@ class Skib extends Skyder{
       this.accely =0;
       this.speed = 5;
       this.life = 4;
-      this.skudFart = 10; 
+      this.skudFart = 15; 
       this.enemy1 =[];
       this.wave=0;
       this.numb=0;
@@ -21,7 +20,7 @@ class Skib extends Skyder{
       this.cup=1;
       this.cdown=this.life;
       this.grace=0;
-      this.skudfart=8;
+      this.skudfart=10;
       this.speedE=0.5;
       this.scoreTexts = [];
       this.Skade = false;
@@ -33,7 +32,7 @@ class Skib extends Skyder{
         this.grace--;
       }
       
-      if (this.skudFart < 11) {
+      if (this.skudFart < 16) {
         this.skudFart++;
       }
       
@@ -68,7 +67,7 @@ class Skib extends Skyder{
     }
     drawSkib() {
     frameCount++; //for at koden kun kører når skibet er i live
-    if(frameCount>10000){  //for at framecounten ikke bliver uendeligt høj og crasher spillet 
+    if(frameCount>10000){  //for at framecounten ikke bliver uendeligt høj og gør spil langsommere
       frameCount=0;
     }
       for (let i=0; i<this.hearts.length; i++){
@@ -90,7 +89,7 @@ class Skib extends Skyder{
           this.cup+=1;
         } //gør det samme som i overnævnte
        
-        //indsæt dette, for funktion til at få liv
+        //indsæt dette et sted, for funktion til at få liv
         /*this.life+=1;
        this.cup=this.hearts.length+1;*/
       
@@ -130,9 +129,6 @@ class Skib extends Skyder{
       this.wave+=1;
       this.rows=Math.min(4,1+Math.floor(this.wave*0.125));
       this.numb=Math.min(4*8,Math.floor((this.wave*0.125*8)/this.rows)*this.rows); //for at undgå at spawne for mange
-      
-      //this.numb=Math.min(4*8,4 + (2 * Math.floor(this.wave*0.5))); //for at undgå at spawne for mange
-
       this.rows2=Math.min(4,1+Math.floor(this.wave*0.0625));
       this.numb2=Math.min(4*8,(Math.max(0,Math.floor((this.wave*0.0625*8)/this.rows2))*this.rows2)); //for ikke at spawne nogen fra starten af
      }
@@ -151,8 +147,7 @@ class Skib extends Skyder{
     else{
       image(skb,this.position.x,this.position.y);
      } //tegner skibet, samt blinker det hvis graceperioden er aktiv, og hvis frametælleren er under 10, hver gang den tikker op med 20./halvdelen af tiden
-
-
+     
      if(this.position.x<10){
       this.accelx=0;
     }
@@ -195,9 +190,9 @@ if(taster.a&&this.accelx > -5&&this.position.x>this.radius){
 }
 
     
-if (this.skudFart > 9&&taster.space) {
+if (this.skudFart > 14&&taster.space) {
     this.skydBullet(this.position, 0.5*PI,"spiller",this.skudfart,this.skudFarve);
-       this.skudFart -= 10
+       this.skudFart -= 15
        }
  }
     /*kollisionSkib(){

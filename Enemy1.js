@@ -2,7 +2,7 @@ class Enemy1 extends EnemyBASE{
   constructor(wave,pos,a,speed){
     super(wave,pos,a,speed);
     this.life=1;
-    this.chance=50;
+    this.chance=35;
     this.vinkel=1.5*PI;
     this.mængde=Math.min(4*8,Math.floor((wave*0.125*8)/a))*a; 
     this.perRow=Math.min(8,Math.ceil(this.mængde/a)); //hold øje med denne ikke tikker op hurtigere end mængde

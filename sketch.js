@@ -14,7 +14,7 @@ let amount2=4; //Bestemmer mængde af enemmy2 der spawner ved hver wave.
 let score=0;
 let highScore=0;
 let savedScore=JSON.parse(localStorage.getItem('playerScore'));
-let taster={
+let taster={  //lånt fra asteroids projekt
   w:false,
   a:false,
   d:false,
@@ -35,12 +35,9 @@ function preload(){
 
 function setup() {
   c = createCanvas(windowWidth-900,windowHeight-120); 
-  // sætter canvas og beholder reference c dertil
   let x = (windowWidth - width)/ 2;
   let y = (windowHeight - height)/ 2;
-  c.position(x, y);  // rykker canvas ind på midten
-  //select('body').style('background-color', '#000000');
-  //reload = new Reload(); 
+  c.position(x, y);  // rykker canvas til midten
   this.spillet =new Spil();
   gameOverButton = createButton('Restart');
   gameOverButton.position(windowWidth/2-40, windowHeight/2);  
@@ -65,28 +62,21 @@ function draw() {
   const display2 = document.getElementById('highScore');
       display2.textContent = `HIGH-SCORE:${highScore}`;
   
-        
-  //image(stjern,0,windowHeight/2,windowWidth,windowHeight);
+
   fill(0 ,0,0,100);
   strokeWeight(16);
   stroke(120,0,0);
-  
- // image(stjern,width/2,height/2,windowWidth*1.5,windowHeight);
+
   rect(0 ,0 , width, height);
- // image(stjerner,width/2,(height)/2,width-10,height-10);
-  // hvilken metode skal også kaldes her?
+
   
   this.spillet.update();
    this.spillet.drawSpil();
- // console.log(windowWidth);
-  //console.log(windowHeight);
+
 }
 
 
-function keyPressed(){
-    if(key=='r'){
-    taster.r=true;
-  }
+function keyPressed(){ //lånt fra asteroids projekt
     if(key=='s'){
     taster.s=true;
   }
@@ -104,12 +94,9 @@ function keyPressed(){
     }
   }
 
-function keyReleased(){
+function keyReleased(){ //lånt fra asteroids projekt
     if(key=='s'){
     taster.s=false;
-  }
-    if(key=='r'){
-    taster.r=false;
   }
     if(key=='w'){
     taster.w=false;
@@ -124,14 +111,14 @@ function keyReleased(){
     taster.space=false;
   }
 }
-function mousePressed() {
+function mousePressed() { //lånt fra asteroids projekt
   if (mouseX > 0 && mouseX < windowWidth && mouseY > 0 && mouseY < windowHeight) {
     let fs = fullscreen();
     fullscreen(!fs);
   }
 }
 
-function windowResized() {
+function windowResized() {  //lånt fra asteroids projekt
   resizeCanvas(width, height);
   let x = (windowWidth - width)/ 2;
   let y = (windowHeight - height)/ 2;

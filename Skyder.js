@@ -1,6 +1,5 @@
 class Skyder {
     constructor() {
-      this.kugler = [];
     }
   
     updateKugler() {

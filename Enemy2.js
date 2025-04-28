@@ -2,7 +2,7 @@ class Enemy2 extends EnemyBASE{
     constructor(wave,pos,a,speed,sPos){
       super(wave,pos,a,speed,sPos);
       this.life=2;
-      this.chance=50;
+      this.chance=25; //chance for at skyde hvert 100ms
       this.vinkel =0;
       this.positionShip=sPos;
       this.mængde= Math.min(4*8,(Math.max(0,Math.floor((wave*0.0625*8)/a))*a));
