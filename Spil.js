@@ -24,8 +24,7 @@ class Spil extends Skyder{
       if (frameCount%this.stjernefreq2>this.stjernefreq2-2){
       this.skydBullet(this.stjernePos,1.5*PI,"harmløs",this.stjernefreq+3,this.farve);
       }
-      this.updateKugler();
-      this.drawKugler();
+      
     }
   
     drawSpil() {

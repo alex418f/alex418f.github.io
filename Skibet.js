@@ -1,3 +1,4 @@
+let bullets=[];
 class Skib extends Skyder{
     constructor() {
       super();
@@ -20,7 +21,7 @@ class Skib extends Skyder{
       this.cup=1;
       this.cdown=this.life;
       this.grace=0;
-      this.skudfart=8;
+      this.skudfart=4;
       this.speedE=0.5;
       this.scoreTexts = [];
       this.Skade = false;
@@ -218,14 +219,14 @@ if (this.skudFart > 9&&taster.space) {
         }
         
         
-        for (let j = 0; j < e1.kugler.length; j++) {
-          const k = e1.kugler[j];
+        for (let j = 0; j < bullets.length; j++) {
+          const k = bullets[j];
           const dx = this.position.x - k.position.x;
           const dy = this.position.y - k.position.y;
           const distance = sqrt(dx * dx + dy * dy);
       
           if (distance < this.radius + k.radius && this.grace == 0 && k.type == "fjende") {
-            e1.kugler.splice(j, 1); 
+            bullets.splice(j, 1); 
             j--; 
             this.Skade=true;
           }
@@ -243,15 +244,15 @@ if (this.skudFart > 9&&taster.space) {
          this.Skade=false;
         }
        
-        for (let j = 0; j< this.kugler.length; j++) {
-          const k = this.kugler[j];
+        for (let j = 0; j< bullets.length; j++) {
+          const k = bullets[j];
           const dx = e1.position.x - k.position.x;
           const dy = e1.position.y - k.position.y;
           const distance = sqrt(dx**2 + dy**2); //trigenometrisk afstand mellem de to
           
           
           if (distance < e1.radius + k.radius&&k.type=="spiller") {
-            this.kugler.splice(j, 1); // fjerner element i array'et
+            bullets.splice(j, 1); // fjerner element i array'et
             j--;
             e1.life--;
            if (e1 instanceof Enemy1){

@@ -77,8 +77,6 @@ class EnemyBASE extends Skyder{
               }
             }
          
-            this.updateKugler();
-            this.drawKugler();
          }
        
         }

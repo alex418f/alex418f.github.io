@@ -9,6 +9,7 @@ class Kugle {
     this.type = type;
     this.farve=farve;
   }
+  
   update(){
     this.life--;
     this.velocity.x = cos(this.kugleVinkel);

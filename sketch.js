@@ -57,7 +57,7 @@ function draw() {
   localStorage.setItem('playerScore', JSON.stringify(highScore));
   if (savedScore>highScore){
     highScore=savedScore;
-  } 
+  }
   console.log(JSON.parse(localStorage.getItem('playerScore')))
   const display = document.getElementById('score');
       display.textContent = `SCORE: ${score}`;
