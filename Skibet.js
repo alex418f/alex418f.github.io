@@ -231,13 +231,6 @@ if (this.skudFart > 14&&taster.space) {
        if (this.Skade==true) {
           this.life-=1;
           this.grace=200; //grace periode efter at have taget skade
-          score-=1000;
-          this.scoreTexts.push({
-            text: "-1000",
-            x: this.position.x,
-            y: this.position.y,
-            timer: 25
-         })
          this.Skade=false;
         }
        
