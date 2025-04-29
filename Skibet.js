@@ -127,8 +127,10 @@ class Skib extends Skyder{
 
     if (this.enemy1.length===0){
       this.wave+=1;
+      
       this.rows=Math.min(4,1+Math.floor(this.wave*0.125));
       this.numb=Math.min(4*8,Math.floor((this.wave*0.125*8)/this.rows)*this.rows); //for at undgå at spawne for mange
+      
       this.rows2=Math.min(4,1+Math.floor(this.wave*0.0625));
       this.numb2=Math.min(4*8,(Math.max(0,Math.floor((this.wave*0.0625*8)/this.rows2))*this.rows2)); //for ikke at spawne nogen fra starten af
      }

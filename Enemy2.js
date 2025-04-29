@@ -5,12 +5,19 @@ class Enemy2 extends EnemyBASE{
       this.chance=25; //chance for at skyde hvert 100ms
       this.vinkel =0;
       this.positionShip=sPos;
+      
       this.mængde= Math.min(4*8,(Math.max(0,Math.floor((wave*0.0625*8)/a))*a));
+      
       this.perRow=Math.min(8,Math.ceil(this.mængde/a));
+      
       this.pos=(pos%(this.perRow+0.00001))*(width/(this.perRow+1))+this.forskydning;
+      
       this.setpoint=Math.ceil((pos/this.perRow))*(this.dist*2);
+      
       this.position=createVector(this.pos,this.setpoint+7.5);
+      
       this.wspeed=speed*(-1)**(Math.ceil(this.perRow/a));
+      
       this.velocity=createVector(-this.speed,0);
     }
 

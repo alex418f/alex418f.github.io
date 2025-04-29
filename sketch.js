@@ -45,6 +45,7 @@ function setup() {
 
 function draw() {
   gameOverButton.mousePressed(() => {
+    bullets.length = 0;
     this.spillet =new Spil();
     score=0;
     })
