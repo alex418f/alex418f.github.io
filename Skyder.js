@@ -1,3 +1,4 @@
+let bullets=[];
 class Skyder {
     constructor() {
     }

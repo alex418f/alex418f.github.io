@@ -1,4 +1,4 @@
-let bullets=[];
+
 class Kugle {
   constructor(pos,vink,type,fart,farve){
     this.position = createVector(pos.x, pos.y);
