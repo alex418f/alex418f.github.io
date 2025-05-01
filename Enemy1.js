@@ -8,7 +8,7 @@ class Enemy1 extends EnemyBASE{
     
     this.perRow=Math.min(8,Math.ceil(this.mængde/a)); //hold øje med denne ikke tikker op hurtigere end mængde
     
-    this.pos=(pos%(this.perRow+0.0001))*(width/(this.perRow+1))+this.forskydning;
+    this.pos=(pos%(this.perRow+0.0001))*(width/(this.perRow+1));
     
     this.setpoint=Math.ceil((pos/this.perRow))*(this.dist*2)-this.dist;
     

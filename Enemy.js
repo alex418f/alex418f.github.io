@@ -11,16 +11,12 @@ class EnemyBASE extends Skyder{
         this.accely=0;
         this.dist=50;
         this.a=a;
-        this.amount=10;
-        //this.floor=Math.floor(this.pos/5.000001+2);
         this.speed=speed;
-        //this.setpoint=Math.ceil((this.pos1/5))*this.dist;
         this.condright =true;
         this.condleft =true;
         this.radius=20;
         this.sWindow =false; //øjeblikket fjenderne har til at skyde
         this.sFrek=50; //ændrer frekvensen af skud
-       // this.position=createVector(this.pos,this.setpoint+7.5);
         //centrer efter variabel for højde, baseret på wave
         this.skudfart = Math.min(6,this.wave*0.1+4);
         this.forskydning = Math.random()*30-15;

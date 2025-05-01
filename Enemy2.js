@@ -10,7 +10,7 @@ class Enemy2 extends EnemyBASE{
       
       this.perRow=Math.min(8,Math.ceil(this.mængde/a));
       
-      this.pos=(pos%(this.perRow+0.00001))*(width/(this.perRow+1))+this.forskydning;
+      this.pos=(pos%(this.perRow+0.00001))*(width/(this.perRow+1));
       
       this.setpoint=Math.ceil((pos/this.perRow))*(this.dist*2);
       

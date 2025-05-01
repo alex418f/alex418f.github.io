@@ -1,6 +1,5 @@
 let spillet;
 let c;
-let count=1;
 let reload;
 let stjerner;
 let stjern;
@@ -9,8 +8,6 @@ let skb;
 let heart;
 let enm22;
 let frameCount=0;
-let amount1=5;
-let amount2=4; //Bestemmer mængde af enemmy2 der spawner ved hver wave.
 let score=0;
 let highScore=0;
 let savedScore=JSON.parse(localStorage.getItem('playerScore'));
@@ -51,12 +48,12 @@ function draw() {
     })
   if(score>highScore){
     highScore=score;
+    localStorage.setItem('playerScore', JSON.stringify(highScore));
   }
-  localStorage.setItem('playerScore', JSON.stringify(highScore));
   if (savedScore>highScore){
     highScore=savedScore;
   }
-  console.log(JSON.parse(localStorage.getItem('playerScore')))
+
   const display = document.getElementById('score');
       display.textContent = `SCORE: ${score}`;
   

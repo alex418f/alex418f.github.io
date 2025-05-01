@@ -35,10 +35,7 @@ class Skib extends Skyder{
       if (this.skudFart < 16) {
         this.skudFart++;
       }
-      
-      //console.log(this.numb);
 
-      //this.kolisionSkib();
       this.kollision();
   
       
@@ -197,11 +194,7 @@ if (this.skudFart > 14&&taster.space) {
        this.skudFart -= 15
        }
  }
-    /*kollisionSkib(){
-      for (let i=0; i< this.Enemy1.length; i++){
-        const e1
-      }
-    }*/
+    
     kollision(){
       for (let i = 0; i< this.enemy1.length; i++) {
        const e1 = this.enemy1[i];
@@ -221,7 +214,6 @@ if (this.skudFart > 14&&taster.space) {
           const dx = this.position.x - k.position.x;
           const dy = this.position.y - k.position.y;
           const distance = sqrt(dx * dx + dy * dy);
-      
           if (distance < this.radius + k.radius && this.grace == 0 && k.type == "fjende") {
             bullets.splice(j, 1); 
             j--; 

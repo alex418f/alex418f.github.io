@@ -1,14 +1,12 @@
 class Spil extends Skyder{
     constructor() {
       super();
-       this.skibet = new Skib(); // Create the ship here
+       this.skibet = new Skib(); // skibet laves her
        this.stjernePos=createVector(0,0)
        this.stjernefreq=this.skibet.wave*0.1+1;
        this.stjernefreq2=Math.max(10,this.stjernefreq)
        this.farve=createVector(255,255,255);
-       //this.wave=1;
        
-       //this.enemy1= new Enemy1();
       
       
       }
@@ -30,15 +28,11 @@ class Spil extends Skyder{
     drawSpil() {
       if (this.skibet.life > 0){
         this.skibet.drawSkib();
-       // this.enemy1.drawEnemy1();
-       //this.enemy.skud();
        gameOverButton.hide();  
       } else {
         gameOverButton.show();  
+        textSize(70);
+        text("Game over", width/2-170, height/2-100);
       }
-}
-
-//function mousePressed() {
-  //if (mouseX > 0 && mouseX < windowWidth && mouseY > 0 && mouseY < windowHeight) {
-
+  }
 }
